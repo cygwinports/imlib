@@ -1,5 +1,5 @@
-category: Gnome Graphics Libs
-requires: cygwin glib gtk+ libX11_6 libXext6 libjpeg62 libpng12 libtiff5 libungif4
+category: Graphics
+requires: cygwin libX11_6 libXext6 libgif4 libjpeg62 libpng12 libtiff5
 sdesc: "Graphics rendering library (runtime)"
 ldesc: "Imlib is an advanced replacement library for libraries like 
 libXpm that provides many more features with much greater flexibility 

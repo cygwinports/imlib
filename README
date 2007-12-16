@@ -5,25 +5,24 @@ provides many more features with much greater flexibility and speed. It
 was originally written for E, now used by the GNOME Project.
 
 Runtime requirements:
-  cygwin-1.5.22-1
-  glib-1.2.10-3
-  gtk+-1.2.10-2
-  libX11_6-1.1.1-1
-  libXext6-1.0.2-1
+  cygwin-1.5.24-2
+  libX11_6-1.1.3-1
+  libXext6-1.0.3-1
+  libgif4-4.1.6-1
   libjpeg62-6b-12
-  libpng12-1.2.12-1
+  libpng12-1.2.23-1
   libtiff5-3.8.2-3
-  libungif4-4.1.4-2
 
 Build requirements:
 (besides corresponding devel packages)
   cygwin-1.5.22-1
-  autoconf2.5-2.60-2
+  autoconf2.5-2.61-1
   automake1.4-1.4p6-2
   binutils-20060817-1
-  cygport-0.2.7-1
+  cygport-0.3.7-1
   gawk-3.1.5-2
-  gcc-core-3.4.4-1
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
   make-3.81-1
   sed-4.1.5-2
 
@@ -54,25 +53,6 @@ Files included in the binary packages:
   /etc/imlib/im_palette.pal
   /etc/imlib/imrc
   /usr/bin/cygImlib-1.dll
-  /usr/bin/cyggdk_imlib-1.dll
-  /usr/bin/imlib_config.exe
-  /usr/lib/cygimlib-bmp.dll
-  /usr/lib/cygimlib-gif.dll
-  /usr/lib/cygimlib-jpeg.dll
-  /usr/lib/cygimlib-png.dll
-  /usr/lib/cygimlib-ppm.dll
-  /usr/lib/cygimlib-ps.dll
-  /usr/lib/cygimlib-tiff.dll
-  /usr/lib/cygimlib-xpm.dll
-  /usr/lib/libimlib-bmp.la
-  /usr/lib/libimlib-gif.la
-  /usr/lib/libimlib-jpeg.la
-  /usr/lib/libimlib-png.la
-  /usr/lib/libimlib-ppm.la
-  /usr/lib/libimlib-ps.la
-  /usr/lib/libimlib-tiff.la
-  /usr/lib/libimlib-xpm.la
-  /usr/share/doc/Cygwin/imlib-1.9.15.README
   /usr/share/doc/imlib-1.9.15/ABOUT-NLS
   /usr/share/doc/imlib-1.9.15/AUTHORS
   /usr/share/doc/imlib-1.9.15/COPYING
@@ -80,28 +60,26 @@ Files included in the binary packages:
   /usr/share/doc/imlib-1.9.15/ChangeLog
   /usr/share/doc/imlib-1.9.15/INSTALL
   /usr/share/doc/imlib-1.9.15/README
-  /usr/share/man/man1/imlib_config.1.gz
 
 (imlib-devel)
   /usr/bin/imlib-config
   /usr/include/Imlib.h
   /usr/include/Imlib_private.h
   /usr/include/Imlib_types.h
-  /usr/include/gdk_imlib.h
-  /usr/include/gdk_imlib_private.h
-  /usr/include/gdk_imlib_types.h
   /usr/lib/libImlib.dll.a
   /usr/lib/libImlib.la
-  /usr/lib/libgdk_imlib.dll.a
-  /usr/lib/libgdk_imlib.la
   /usr/lib/pkgconfig/imlib.pc
-  /usr/lib/pkgconfig/imlibgdk.pc
   /usr/share/aclocal/imlib.m4
   /usr/share/man/man1/imlib-config.1.gz
 
 ------------------
 
 Port Notes:
+
+----- version 1.9.15-2 -----
+Include Gentoo security patch for CVE-2007-3568.
+Disabled GdkImlib to remove obsolete gtk+ dependency.
+Depend on libgif instead of libungif.
 
 ----- version 1.9.15-1 -----
 Final version bump.

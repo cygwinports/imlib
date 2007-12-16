@@ -1,0 +1,29 @@
+inherit gnome.org
+
+DESCRIPTION="GNOME 1.4 graphics rendering library"
+
+PATCH_URI="
+	mirror://portage/media-libs/${PN}/files/${P}.patch
+	mirror://portage/media-libs/${PN}/files/${PN}-security.patch
+	mirror://portage/media-libs/${PN}/files/${P}-bpp16-CVE-2007-3568.patch
+	mirror://portage/media-libs/${PN}/files/${P}-fix-rendering.patch
+"
+
+PKG_NAMES="${PN} ${PN}-devel"
+PKG_HINTS="setup devel"
+PKG_CONTENTS[0]="etc/ usr/bin/*.dll usr/share/doc/"
+PKG_CONTENTS[1]="usr/bin/imlib-config usr/include/ usr/lib/
+                 usr/share/aclocal/ usr/share/man/man1/imlib-config.1*"
+
+CYGCONF_ARGS="
+	--sysconfdir=/etc/imlib
+	--disable-static
+	--disable-gdk
+"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	rm -f ${D}/usr/lib/pkgconfig/imlibgdk.pc
+}
