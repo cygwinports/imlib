@@ -1,0 +1,21 @@
+--- origsrc/imlib-1.9.15/configure.in	2007-12-16 13:15:51.812500000 -0600
++++ src/imlib-1.9.15/configure.in	2007-12-16 15:33:21.171875000 -0600
+@@ -265,12 +266,12 @@
+ 
+ 
+ AC_CHECK_HEADER(gif_lib.h,
+-  [AC_CHECK_LIB(ungif, DGifOpenFileName,
+-    [GIFLIBS="-lungif"
+-     SUPPORT_LIBS="$SUPPORT_LIBS -lungif"; AC_DEFINE(HAVE_LIBGIF, 1, [ ])],
+-    [AC_CHECK_LIB(gif, DGifOpenFileName,
+-      [GIFLIBS="-lgif"
+-      SUPPORT_LIBS="$SUPPORT_LIBS -lgif"
++  [AC_CHECK_LIB(gif, DGifOpenFileName,
++    [GIFLIBS="-lgif"
++     SUPPORT_LIBS="$SUPPORT_LIBS -lgif"; AC_DEFINE(HAVE_LIBGIF, 1, [ ])],
++    [AC_CHECK_LIB(ungif, DGifOpenFileName,
++      [GIFLIBS="-lungif"
++      SUPPORT_LIBS="$SUPPORT_LIBS -lungif"
+        AC_DEFINE(HAVE_LIBGIF, 1, [ ])],
+       [AC_MSG_ERROR(*** GIF library file not found ***)], 
+       $GX_LIBS)],

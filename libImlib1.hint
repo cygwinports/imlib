@@ -1,7 +1,7 @@
 category: Graphics
-requires: cygwin libX11-devel libXext-devel libgif-devel libjpeg-devel libpng12-devel libtiff-devel
+requires: cygwin libX11_6 libXext6 libgif4 libjpeg62 libpng12 libtiff5
 external-source: imlib
-sdesc: "Graphics rendering library (development)"
+sdesc: "Graphics rendering library (runtime)"
 ldesc: "Imlib is an advanced replacement library for libraries like 
 libXpm that provides many more features with much greater flexibility 
 and speed. It was originally written for E, now used by the GNOME 

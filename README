@@ -5,24 +5,26 @@ provides many more features with much greater flexibility and speed. It
 was originally written for E, now used by the GNOME Project.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  libX11_6-1.1.3-1
-  libXext6-1.0.3-1
-  libgif4-4.1.6-1
+  cygwin-1.5.25-15
+  libgif4-4.1.6-2
   libjpeg62-6b-12
-  libpng12-1.2.23-1
+  libpng12-1.2.33-1
   libtiff5-3.8.2-3
+  libX11_6-1.1.5-1
+  libXext6-1.0.4-1
+(libgdk_imlib1)
+  libglib1.2_0-1.2.10-5
+  libgtk1.2_0-1.2.10-4
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.22-1
-  autoconf2.5-2.61-1
-  automake1.4-1.4p6-2
-  binutils-20060817-1
-  cygport-0.3.7-1
-  gawk-3.1.5-2
+  autoconf2.5-2.63-1
+  automake1.4-1.4p6-5
+  binutils-20080624-2
+  cygport-0.4.2-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
-  libtool1.5-1.5.23a-2
+  libtool-2.2.6a-1
   make-3.81-1
   sed-4.1.5-2
 
@@ -40,14 +42,16 @@ Build instructions:
 
 This will create:
   /usr/src/imlib-1.9.15-1-src.tar.bz2
-  /usr/src/imlib-1.9.15-1.tar.bz2
-  /usr/src/imlib-devel-1.9.15-1.tar.bz2
+  /usr/src/libImlib-devel-1.9.15-1.tar.bz2
+  /usr/src/libImlib1-1.9.15-1.tar.bz2
+  /usr/src/libgdk_imlib-devel-1.9.15-1.tar.bz2
+  /usr/src/libgdk_imlib1-1.9.15-1.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
-(imlib)
+(libImlib1)
   /etc/imlib/im_palette-small.pal
   /etc/imlib/im_palette-tiny.pal
   /etc/imlib/im_palette.pal
@@ -61,7 +65,7 @@ Files included in the binary packages:
   /usr/share/doc/imlib-1.9.15/INSTALL
   /usr/share/doc/imlib-1.9.15/README
 
-(imlib-devel)
+(libImlib-devel)
   /usr/bin/imlib-config
   /usr/include/Imlib.h
   /usr/include/Imlib_private.h
@@ -72,9 +76,41 @@ Files included in the binary packages:
   /usr/share/aclocal/imlib.m4
   /usr/share/man/man1/imlib-config.1.gz
 
+(libgdk_imlib1)
+  /usr/bin/cyggdk_imlib-1.dll
+  /usr/bin/imlib_config.exe
+  /usr/lib/cygimlib-bmp.dll
+  /usr/lib/cygimlib-gif.dll
+  /usr/lib/cygimlib-jpeg.dll
+  /usr/lib/cygimlib-png.dll
+  /usr/lib/cygimlib-ppm.dll
+  /usr/lib/cygimlib-ps.dll
+  /usr/lib/cygimlib-tiff.dll
+  /usr/lib/cygimlib-xpm.dll
+  /usr/lib/libimlib-bmp.la
+  /usr/lib/libimlib-gif.la
+  /usr/lib/libimlib-jpeg.la
+  /usr/lib/libimlib-png.la
+  /usr/lib/libimlib-ppm.la
+  /usr/lib/libimlib-ps.la
+  /usr/lib/libimlib-tiff.la
+  /usr/lib/libimlib-xpm.la
+  /usr/share/man/man1/imlib_config.1.gz
+
+(libgdk_imlib-devel)
+  /usr/include/gdk_imlib.h
+  /usr/include/gdk_imlib_private.h
+  /usr/include/gdk_imlib_types.h
+  /usr/lib/libgdk_imlib.dll.a
+  /usr/lib/libgdk_imlib.la
+  /usr/lib/pkgconfig/imlibgdk.pc
+
 ------------------
 
 Port Notes:
+
+----- version 1.9.15-3 -----
+Reenabled GdkImlib as a separate package.
 
 ----- version 1.9.15-2 -----
 Include Gentoo security patch for CVE-2007-3568.
