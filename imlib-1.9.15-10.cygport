@@ -23,4 +23,4 @@ libgdk_imlib1_CONTENTS="usr/bin/cyggdk_imlib-1.dll usr/bin/imlib_config.exe
 libgdk_imlib_devel_CONTENTS="usr/include/gdk_imlib* usr/lib/libgdk_imlib.*
                              usr/lib/pkgconfig/imlibgdk.pc"
 
-CYGCONF_ARGS="--sysconfdir=/etc/imlib --disable-static"
+CYGCONF_ARGS="--sysconfdir=/etc/imlib"
