@@ -5,28 +5,26 @@ provides many more features with much greater flexibility and speed. It
 was originally written for E, now used by the GNOME Project.
 
 Runtime requirements:
-  cygwin-1.7.0-44
-  libgcc1-4.3.2-2
+  cygwin-1.7.1-1
+  libgcc1-4.3.4-3
   libgif4-4.1.6-10
-  libjpeg62-6b-20
+  libjpeg7-7-10
   libpng12-1.2.35-10
-  libtiff5-3.8.2-10
-  libX11_6-1.2-10
-  libXext6-1.0.5-10
-(libgdk_imlib1)
-  libglib1.2_0-1.2.10-10
-  libgtk1.2_0-1.2.10-10
+  libtiff5-3.9.2-1
+  libX11_6-1.3.3-1
+  libXext6-1.1.1-1
 
 Build requirements:
 (besides corresponding devel packages)
   autoconf2.5-2.63-10
   automake1.4-1.4p6-10
-  binutils-20080624-2
-  cygport-0.9.6-1
-  gawk-3.1.6-2
-  gcc4-core-4.3.2-2
-  libtool-2.2.6a-1
+  binutils-2.19.51-1
+  cygport-0.9.80-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-3
+  libtool-2.2.7a-15
   make-3.81-2
+  pkg-config-0.23b-10
   sed-4.1.5-2
 
 Canonical download:
@@ -45,71 +43,14 @@ This will create:
   /usr/src/imlib-1.9.15-1-src.tar.bz2
   /usr/src/libImlib-devel-1.9.15-1.tar.bz2
   /usr/src/libImlib1-1.9.15-1.tar.bz2
-  /usr/src/libgdk_imlib-devel-1.9.15-1.tar.bz2
-  /usr/src/libgdk_imlib1-1.9.15-1.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary packages:
-
-(libImlib1)
-  /etc/imlib/im_palette-small.pal
-  /etc/imlib/im_palette-tiny.pal
-  /etc/imlib/im_palette.pal
-  /etc/imlib/imrc
-  /usr/bin/cygImlib-1.dll
-  /usr/share/doc/imlib/ABOUT-NLS
-  /usr/share/doc/imlib/AUTHORS
-  /usr/share/doc/imlib/COPYING
-  /usr/share/doc/imlib/COPYING.LIB
-  /usr/share/doc/imlib/ChangeLog
-  /usr/share/doc/imlib/README
-
-(libImlib-devel)
-  /usr/bin/imlib-config
-  /usr/include/Imlib.h
-  /usr/include/Imlib_private.h
-  /usr/include/Imlib_types.h
-  /usr/lib/libImlib.a
-  /usr/lib/libImlib.dll.a
-  /usr/lib/libImlib.la
-  /usr/lib/pkgconfig/imlib.pc
-  /usr/share/aclocal/imlib.m4
-  /usr/share/man/man1/imlib-config.1.gz
-
-(libgdk_imlib1)
-  /usr/bin/cyggdk_imlib-1.dll
-  /usr/bin/imlib_config.exe
-  /usr/lib/cygimlib-bmp.dll
-  /usr/lib/cygimlib-gif.dll
-  /usr/lib/cygimlib-jpeg.dll
-  /usr/lib/cygimlib-png.dll
-  /usr/lib/cygimlib-ppm.dll
-  /usr/lib/cygimlib-ps.dll
-  /usr/lib/cygimlib-tiff.dll
-  /usr/lib/cygimlib-xpm.dll
-  /usr/lib/libimlib-bmp.la
-  /usr/lib/libimlib-gif.la
-  /usr/lib/libimlib-jpeg.la
-  /usr/lib/libimlib-png.la
-  /usr/lib/libimlib-ppm.la
-  /usr/lib/libimlib-ps.la
-  /usr/lib/libimlib-tiff.la
-  /usr/lib/libimlib-xpm.la
-  /usr/share/man/man1/imlib_config.1.gz
-
-(libgdk_imlib-devel)
-  /usr/include/gdk_imlib.h
-  /usr/include/gdk_imlib_private.h
-  /usr/include/gdk_imlib_types.h
-  /usr/lib/libgdk_imlib.a
-  /usr/lib/libgdk_imlib.dll.a
-  /usr/lib/libgdk_imlib.la
-  /usr/lib/pkgconfig/imlibgdk.pc
-
-------------------
-
 Port Notes:
+
+----- version 1.9.15-11 -----
+Rebuilt for jpeg-7.
+Disabled GdkImlib library.
 
 ----- version 1.9.15-10 -----
 Initial release for Cygwin 1.7.

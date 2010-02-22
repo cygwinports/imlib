@@ -10,9 +10,10 @@ PATCH_URI="
 	mirror://portage/media-libs/${PN}/files/${P}-asneeded.patch
 	1.9.15-gif-before-ungif.patch
 	1.9.15-no-undefined.patch
+	1.9.15-gtk-pkg-config.patch
 "
 
-PKG_NAMES="${PN} libImlib1 libImlib-devel libgdk_imlib1 libgdk_imlib-devel"
+PKG_NAMES="${PN} libImlib1 libImlib-devel" # libgdk_imlib1 libgdk_imlib-devel"
 libImlib1_CONTENTS="etc/ usr/bin/cygImlib-1.dll usr/share/doc/"
 libImlib_devel_CONTENTS="usr/bin/imlib-config usr/include/Imlib* usr/lib/libImlib.*
                          usr/lib/pkgconfig/imlib.pc usr/share/aclocal/
@@ -23,4 +24,4 @@ libgdk_imlib1_CONTENTS="usr/bin/cyggdk_imlib-1.dll usr/bin/imlib_config.exe
 libgdk_imlib_devel_CONTENTS="usr/include/gdk_imlib* usr/lib/libgdk_imlib.*
                              usr/lib/pkgconfig/imlibgdk.pc"
 
-CYGCONF_ARGS="--sysconfdir=/etc/imlib"
+CYGCONF_ARGS="--sysconfdir=/etc/imlib --disable-gdk --disable-modules"
