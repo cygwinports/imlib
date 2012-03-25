@@ -24,4 +24,6 @@ libgdk_imlib1_CONTENTS="usr/bin/cyggdk_imlib-1.dll usr/bin/imlib_config.exe
 libgdk_imlib_devel_CONTENTS="usr/include/gdk_imlib* usr/lib/libgdk_imlib.*
                              usr/lib/pkgconfig/imlibgdk.pc"
 
-CYGCONF_ARGS="--sysconfdir=/etc/imlib --disable-gdk --disable-modules"
+WANT_AUTOMAKE=1.9
+
+CYGCONF_ARGS="--sysconfdir=/etc/imlib --disable-gdk --disable-modules --disable-static"
