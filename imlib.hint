@@ -1,7 +1,0 @@
-category: Graphics
-requires: libImlib1
-sdesc: "Graphics rendering library (sources)"
-ldesc: "Imlib is an advanced replacement library for libraries like 
-libXpm that provides many more features with much greater flexibility 
-and speed. It was originally written for E, now used by the GNOME 
-Project."

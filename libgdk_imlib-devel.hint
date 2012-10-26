@@ -1,8 +1,0 @@
-category: Graphics Gnome
-requires: libgdk_imlib1 libImlib-devel libgif-devel libglib1.2-devel libgtk1.2-devel libjpeg-devel libpng14-devel libtiff-devel libX11-devel libXext-devel
-external-source: imlib
-sdesc: "Graphics rendering library (GTK+ development)"
-ldesc: "Imlib is an advanced replacement library for libraries like 
-libXpm that provides many more features with much greater flexibility 
-and speed. It was originally written for E, now used by the GNOME 
-Project."

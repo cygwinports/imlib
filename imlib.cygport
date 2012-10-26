@@ -1,6 +1,13 @@
 inherit gnome.org
 
-DESCRIPTION="GNOME 1.4 graphics rendering library"
+NAME="imlib"
+VERSION=1.9.15
+RELEASE=13
+CATEGORY="Graphics"
+SUMMARY="GNOME 1.4 graphics rendering library"
+DESCRIPTION="Imlib is an advanced replacement library for libraries like
+libXpm that provides many more features with much greater flexibility
+and speed. It was originally written for E, now used by the GNOME Project."
 
 PATCH_URI="
 	mirror://portage/media-libs/${PN}/files/${P}.patch
@@ -8,6 +15,7 @@ PATCH_URI="
 	mirror://portage/media-libs/${PN}/files/${P}-bpp16-CVE-2007-3568.patch
 	mirror://portage/media-libs/${PN}/files/${P}-fix-rendering.patch
 	mirror://portage/media-libs/${PN}/files/${P}-asneeded.patch
+	mirror://portage/media-libs/${PN}/files/${P}-libpng15.patch
 	1.9.15-gif-before-ungif.patch
 	1.9.15-no-undefined.patch
 	1.9.15-gtk-pkg-config.patch
@@ -26,4 +34,6 @@ libgdk_imlib_devel_CONTENTS="usr/include/gdk_imlib* usr/lib/libgdk_imlib.*
 
 WANT_AUTOMAKE=1.9
 
-CYGCONF_ARGS="--sysconfdir=/etc/imlib --disable-gdk --disable-modules --disable-static"
+CYGCONF_ARGS="--sysconfdir=/etc/imlib --disable-gdk --disable-modules"
+
+KEEP_LA_FILES="none"

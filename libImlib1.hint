@@ -1,8 +1,0 @@
-category: Graphics
-requires: libgif4 libjpeg8 libpng14 libtiff5 libX11_6 libXext6
-external-source: imlib
-sdesc: "Graphics rendering library (runtime)"
-ldesc: "Imlib is an advanced replacement library for libraries like 
-libXpm that provides many more features with much greater flexibility 
-and speed. It was originally written for E, now used by the GNOME 
-Project."
