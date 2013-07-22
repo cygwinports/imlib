@@ -2,7 +2,7 @@ inherit gnome.org
 
 NAME="imlib"
 VERSION=1.9.15
-RELEASE=13
+RELEASE=14
 CATEGORY="Graphics"
 SUMMARY="GNOME 1.4 graphics rendering library"
 DESCRIPTION="Imlib is an advanced replacement library for libraries like
@@ -10,30 +10,29 @@ libXpm that provides many more features with much greater flexibility
 and speed. It was originally written for E, now used by the GNOME Project."
 
 PATCH_URI="
-	mirror://portage/media-libs/${PN}/files/${P}.patch
-	mirror://portage/media-libs/${PN}/files/${PN}-security.patch
-	mirror://portage/media-libs/${PN}/files/${P}-bpp16-CVE-2007-3568.patch
-	mirror://portage/media-libs/${PN}/files/${P}-fix-rendering.patch
-	mirror://portage/media-libs/${PN}/files/${P}-asneeded.patch
-	mirror://portage/media-libs/${PN}/files/${P}-libpng15.patch
-	1.9.15-gif-before-ungif.patch
+	http://pkgs.fedoraproject.org/repo/pkgs/imlib/imlib-1.9.15-autotools-rebase.patch.bz2/b8d16eb747ef64ee2d0da28c16bd6d69/imlib-1.9.15-autotools-rebase.patch.bz2
+	http://pkgs.fedoraproject.org/cgit/imlib.git/plain/imlib-1.9.13-sec2.patch
+	http://pkgs.fedoraproject.org/cgit/imlib.git/plain/imlib-1.9.15-bpp16-CVE-2007-3568.patch
+	http://pkgs.fedoraproject.org/cgit/imlib.git/plain/imlib-1.9.10-cppflags.patch
+	http://pkgs.fedoraproject.org/cgit/imlib.git/plain/imlib-1.9.13-underquoted.patch
+	http://pkgs.fedoraproject.org/cgit/imlib.git/plain/imlib-1.9.15-lib-bloat.patch
+	http://pkgs.fedoraproject.org/cgit/imlib.git/plain/imlib-1.9.15-check-for-shm-pixmaps.patch
+	http://pkgs.fedoraproject.org/cgit/imlib.git/plain/imlib-1.9.15-libpng15.patch
 	1.9.15-no-undefined.patch
-	1.9.15-gtk-pkg-config.patch
 "
 
-PKG_NAMES="${PN} libImlib1 libImlib-devel" # libgdk_imlib1 libgdk_imlib-devel"
+PKG_NAMES="libImlib1 libImlib-devel libgdk_imlib1 libgdk_imlib-devel"
 libImlib1_CONTENTS="etc/ usr/bin/cygImlib-1.dll usr/share/doc/"
 libImlib_devel_CONTENTS="usr/bin/imlib-config usr/include/Imlib* usr/lib/libImlib.*
                          usr/lib/pkgconfig/imlib.pc usr/share/aclocal/
                          usr/share/man/man1/imlib-config.1*"
 libgdk_imlib1_CONTENTS="usr/bin/cyggdk_imlib-1.dll usr/bin/imlib_config.exe
-                        usr/lib/cygimlib-* usr/lib/libimlib-*
                         usr/share/man/man1/imlib_config.1*"
 libgdk_imlib_devel_CONTENTS="usr/include/gdk_imlib* usr/lib/libgdk_imlib.*
                              usr/lib/pkgconfig/imlibgdk.pc"
 
 WANT_AUTOMAKE=1.9
 
-CYGCONF_ARGS="--sysconfdir=/etc/imlib --disable-gdk --disable-modules"
+CYGCONF_ARGS="--sysconfdir=/etc/imlib --disable-modules"
 
 KEEP_LA_FILES="none"
