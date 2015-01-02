@@ -2,7 +2,7 @@ inherit gnome.org
 
 NAME="imlib"
 VERSION=1.9.15
-RELEASE=14
+RELEASE=15
 CATEGORY="Graphics"
 SUMMARY="GNOME 1.4 graphics rendering library"
 DESCRIPTION="Imlib is an advanced replacement library for libraries like
