@@ -2,7 +2,7 @@ inherit gnome.org
 
 NAME="imlib"
 VERSION=1.9.15
-RELEASE=15
+RELEASE=16
 CATEGORY="Graphics"
 SUMMARY="GNOME 1.4 graphics rendering library"
 DESCRIPTION="Imlib is an advanced replacement library for libraries like
@@ -10,14 +10,15 @@ libXpm that provides many more features with much greater flexibility
 and speed. It was originally written for E, now used by the GNOME Project."
 
 PATCH_URI="
-	http://pkgs.fedoraproject.org/repo/pkgs/imlib/imlib-1.9.15-autotools-rebase.patch.bz2/b8d16eb747ef64ee2d0da28c16bd6d69/imlib-1.9.15-autotools-rebase.patch.bz2
-	http://pkgs.fedoraproject.org/cgit/imlib.git/plain/imlib-1.9.13-sec2.patch
-	http://pkgs.fedoraproject.org/cgit/imlib.git/plain/imlib-1.9.15-bpp16-CVE-2007-3568.patch
-	http://pkgs.fedoraproject.org/cgit/imlib.git/plain/imlib-1.9.10-cppflags.patch
-	http://pkgs.fedoraproject.org/cgit/imlib.git/plain/imlib-1.9.13-underquoted.patch
-	http://pkgs.fedoraproject.org/cgit/imlib.git/plain/imlib-1.9.15-lib-bloat.patch
-	http://pkgs.fedoraproject.org/cgit/imlib.git/plain/imlib-1.9.15-check-for-shm-pixmaps.patch
-	http://pkgs.fedoraproject.org/cgit/imlib.git/plain/imlib-1.9.15-libpng15.patch
+	http://src.fedoraproject.org/repo/pkgs/imlib/imlib-1.9.15-autotools-rebase.patch.bz2/b8d16eb747ef64ee2d0da28c16bd6d69/imlib-1.9.15-autotools-rebase.patch.bz2
+	http://src.fedoraproject.org/cgit/rpms/imlib.git/plain/imlib-1.9.13-sec2.patch
+	http://src.fedoraproject.org/cgit/rpms/imlib.git/plain/imlib-1.9.15-bpp16-CVE-2007-3568.patch
+	http://src.fedoraproject.org/cgit/rpms/imlib.git/plain/imlib-1.9.10-cppflags.patch
+	http://src.fedoraproject.org/cgit/rpms/imlib.git/plain/imlib-1.9.13-underquoted.patch
+	http://src.fedoraproject.org/cgit/rpms/imlib.git/plain/imlib-1.9.15-lib-bloat.patch
+	http://src.fedoraproject.org/cgit/rpms/imlib.git/plain/imlib-1.9.15-check-for-shm-pixmaps.patch
+	http://src.fedoraproject.org/cgit/rpms/imlib.git/plain/imlib-1.9.15-libpng15.patch
+	http://src.fedoraproject.org/cgit/rpms/imlib.git/plain/imlib-1.9.15-giflib5.patch
 	1.9.15-no-undefined.patch
 "
 
@@ -34,5 +35,3 @@ libgdk_imlib_devel_CONTENTS="usr/include/gdk_imlib* usr/lib/libgdk_imlib.*
 WANT_AUTOMAKE=1.9
 
 CYGCONF_ARGS="--sysconfdir=/etc/imlib --disable-modules"
-
-KEEP_LA_FILES="none"
